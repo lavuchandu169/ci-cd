@@ -3,12 +3,13 @@ name: Deploy HTML to GitHub Pages
 on:
   push:
     branches:
-      - main  # Triggers deployment when pushing to 'main' branch
+      - main
+  workflow_dispatch:  # Allows manual trigger
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -19,7 +20,7 @@ jobs:
       - name: Upload Files to GitHub Pages
         uses: actions/upload-pages-artifact@v1
         with:
-          path: .  # Deploys everything in the repository
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
