@@ -11,3 +11,4 @@ This project sets up a **CI/CD pipeline** using **GitHub Actions** to automatica
 ---
 
 ## 📂 Project Structure
+github/ │ ├── workflows/ │ │ ├── deploy.yml # GitHub Actions workflow file │── index.html # Static HTML file to be deployed │── main.tf # Terraform configuration for S3 bucket (optional) │── README.md
